@@ -5,227 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Portfolio</title>
     <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --text-color: #333;
-            --background-color: #f4f4f4;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
-
         .container {
-            max-width: 100%;
-            padding: 0 20px;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
         }
-
         header {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+            background: #35424a;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
         }
-
-        nav ul {
-            display: flex;
-            justify-content: space-around;
-            list-style: none;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        main {
-            margin-top: 60px;
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-        }
-
-        section {
-            flex: 0 0 100vw;
-            scroll-snap-align: start;
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            height: calc(100vh - 60px);
-            overflow-y: auto;
-        }
-
-        h1, h2 {
-            margin-bottom: 1rem;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .project-card {
-            background-color: var(--secondary-color);
-            color: #fff;
-            padding: 1rem;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        footer {
-            background-color: var(--secondary-color);
-            color: #fff;
+        header h1 {
+            margin: 0;
             text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav ul li {
-                margin-bottom: 0.5rem;
-            }
+        .main-nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .main-nav ul {
+            padding: 0;
+            list-style-type: none;
+        }
+        .main-nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        section {
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .project {
+            background: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        footer {
+            background: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <nav>
+            <h1>Your Name</h1>
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="#coding">Coding</a></li>
-                    <li><a href="#sketching">Sketching</a></li>
-                    <li><a href="#photography">Photography</a></li>
-                    <li><a href="#ai">AI</a></li>
-                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section id="coding">
-            <h2>Coding</h2>
-            <p>Showcase your coding skills and projects here.</p>
-            <div class="project-grid">
-                <div class="project-card">Project 1</div>
-                <div class="project-card">Project 2</div>
-                <div class="project-card">Project 3</div>
-            </div>
-        </section>
-
-        <section id="sketching">
-            <h2>Sketching</h2>
-            <p>Display your sketches or artwork here.</p>
-            <!-- Add a gallery or grid of sketches -->
-        </section>
-
-        <section id="photography">
-            <h2>Photography</h2>
-            <p>Showcase your best photographs here.</p>
-            <!-- Add a photo gallery -->
-        </section>
-
-        <section id="ai">
-            <h2>AI</h2>
-            <p>Highlight your AI projects and research here.</p>
-            <div class="project-grid">
-                <div class="project-card">AI Project 1</div>
-                <div class="project-card">AI Project 2</div>
-            </div>
-        </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-            <ul id="publications-list">
-                <!-- Publications will be dynamically added here -->
-            </ul>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm a [your profession] passionate about [your interests]. I specialize in [your skills].</p>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <p>Showcase your various projects here.</p>
-            <div class="project-grid" id="projects-grid">
-                <!-- Projects will be dynamically added here -->
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Description of project 1.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of project 2.</p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>Description of project 3.</p>
             </div>
         </section>
-    </main>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: your.email@example.com</p>
+            <p>LinkedIn: [Your LinkedIn Profile]</p>
+            <p>GitHub: [Your GitHub Profile]</p>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Sample data
-        const publications = [
-            "Paper 1: AI in Modern Applications",
-            "Paper 2: Advanced Sketching Techniques",
-            "Paper 3: Photography and AI Integration"
-        ];
-
-        const projects = [
-            { name: "Project A", category: "Coding" },
-            { name: "Project B", category: "AI" },
-            { name: "Project C", category: "Photography" },
-            { name: "Project D", category: "Sketching" }
-        ];
-
-        // Populate publications
-        const publicationsList = document.getElementById('publications-list');
-        publications.forEach(pub => {
-            const li = document.createElement('li');
-            li.textContent = pub;
-            publicationsList.appendChild(li);
-        });
-
-        // Populate projects
-        const projectsGrid = document.getElementById('projects-grid');
-        projects.forEach(project => {
-            const div = document.createElement('div');
-            div.className = 'project-card';
-            div.textContent = `${project.name} (${project.category})`;
-            projectsGrid.appendChild(div);
-        });
-
-        // Smooth scrolling for navigation
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth',
-                    inline: 'start'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
