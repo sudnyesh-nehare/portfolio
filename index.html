@@ -23,11 +23,11 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background-color);
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 100%;
             padding: 0 20px;
         }
 
@@ -55,17 +55,21 @@
 
         main {
             margin-top: 60px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem 0;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
         }
 
         section {
+            flex: 0 0 100vw;
+            scroll-snap-align: start;
             background-color: #fff;
             padding: 2rem;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            height: calc(100vh - 60px);
+            overflow-y: auto;
         }
 
         h1, h2 {
@@ -95,7 +99,9 @@
             color: #fff;
             text-align: center;
             padding: 1rem 0;
-            margin-top: 2rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         @media (max-width: 768px) {
@@ -126,7 +132,7 @@
         </div>
     </header>
 
-    <main class="container">
+    <main>
         <section id="coding">
             <h2>Coding</h2>
             <p>Showcase your coding skills and projects here.</p>
@@ -215,7 +221,8 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                    behavior: 'smooth',
+                    inline: 'start'
                 });
             });
         });
